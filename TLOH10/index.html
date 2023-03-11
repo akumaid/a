@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/css/sty.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="div-frame">
+  <div class="frame">
+    <iframe src="/a/TLOH10/akuma" allow="autoplay; encrypted-media" scrolling="no" frameborder="0" allowfullscreen id="iframe"></iframe>
+  </div>
+  <ul class="tab-server" id="serverid">
+    <li class="server">Pilih Server <ul class="sub-server">
+        <li class="btn active">
+          <a href="javascript:void" onclick="go('/a/TLOH10/akuma')">Akumadrive</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://gdriveplayer.to/embed2.php?link=EJ8VR7jIFC7RtLD2Ki%252F6eQRz2Mct1wspEA28nrXkrB0artW3U2fXEhwYYDTioZTMFktjso3KkXI5s6kWQQvDAAsqlIjbjiWE4NTf3Zwd1EqomZG14qqQM3%252FDACksqeZ6yW2OO3zZYrYQKxVcWle9yPZzYxeIuz5hs0%252F6nXryxP%252BfwouQMz4fxiCqWXyrQj4JTZIedRTZWLH6i95sO6kyJ%252FYzy3%252BPzBlVZmY98Wg8e9Ks1DgDAGNN1KqHyHuoDsop0%253D')">Google V3</a>
+        </li>
+		<li class="btn">
+          <a href="javascript:void" onclick="go('https://acefile.co/player/96936742')">Acefile</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://www.blogger.com/video.g?token=AD6v5dw8L0brDHFzueXddydCh0kLrVE0PtH4_yTdhAqWrNcTDj_ijgU1_8AaLp6kftLy6oAl2KpOaeGpjDsY9C88aINONqOtkK3FVgtZe4pksGLo9zELD4Lq7XdPaMaX6KTEzJujNxQ')">Google V2</a>
+        </li>
+		<li class="btn">
+          <a href="javascript:void" onclick="go('https://mega.nz/embed/UyAnQRLT#I-thP0JtTkY8w38wNnvfM6LUfZGUgirwGEIqCOop804')">Mega</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://sbbrisk.com/e/zj1uy2x4d0mk.html?poster=https://kuma-stream.github.io/src/poster.png')">Streamsb</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<script>
+  function go(loc) {
+    document.getElementById('iframe').src = loc;
+  };
+  var btnContainer = document.getElementById("serverid");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+<script src="/a.js" type="text/javascript"></script>
+  </body>
+</html>
