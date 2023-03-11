@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/css/sty.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="div-frame">
+  <div class="frame">
+    <iframe src="/a/HYSK10/akuma" allow="autoplay; encrypted-media" scrolling="no" frameborder="0" allowfullscreen id="iframe"></iframe>
+  </div>
+  <ul class="tab-server" id="serverid">
+    <li class="server">Pilih Server <ul class="sub-server">
+        <li class="btn active">
+          <a href="javascript:void" onclick="go('/a/HYSK10/akuma')">Akumadrive</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://gdriveplayer.to/embed2.php?link=eFRVlJ4bcouDsxMWm5dUWwUd21B2YlpPDuoWUJuJokGYW3g7lJgqmfqxE5c4CBEBghAzdVVsB0%252BKApF8RU6WOaRk6OasVi0bE9RT7Xua8dwjmDMFUKymiEQBxFJX5ab%252BiBnFE2%252BKoBePouQMH3Lkuxf7MT3tZjVEL17OJLviB5LzPk9Z6aPLQOvu0iDQ1pgrMM3NuscNAtyVxBkfZGfcXHQRC8%252B8NnF23oLqkYQLRbYyD7LOqLjdjKNxW7xTtdSXw%253D')">Google V3</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://www.blogger.com/video.g?token=AD6v5dw07F0NHvYU6nrJd9I42l2WIcWH1W4asYfsdyMsFuIBZyrKMuL1a5PNwTMASOSIAuMApRDjSfRaTTFu69BVBX-xFgOwbdrlY-v10lxkhxryu9m1P6sj7ixFP3r35QrmIm3T1_m9')">Google V2</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://sbbrisk.com/e/e7mhipnz3pck.html?poster=https://kuma-stream.github.io/src/poster.png')">Streamsb</a>
+        </li>
+		<li class="btn">
+          <a href="javascript:void" onclick="go('https://acefile.co/player/96910648')">Acefile</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<script>
+  function go(loc) {
+    document.getElementById('iframe').src = loc;
+  };
+  var btnContainer = document.getElementById("serverid");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+<script src="/a.js" type="text/javascript"></script>
+  </body>
+</html>
