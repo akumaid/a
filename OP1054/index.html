@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/css/sty.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="div-frame">
+  <div class="frame">
+    <iframe src="/a/OP1054/tele" allow="autoplay; encrypted-media" scrolling="no" frameborder="0" allowfullscreen id="iframe"></iframe>
+  </div>
+  <ul class="tab-server" id="serverid">
+    <li class="server">Pilih Server <ul class="sub-server">
+		<li class="btn active">
+          <a href="javascript:void" onclick="go('/a/OP1054/tele')">TL</a>
+        </li>
+        <li class="btn">
+		<a href="javascript:void" onclick="go('https://short.ink/RpREiN-2y')">Abyys</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://www.blogger.com/video.g?token=AD6v5dza6Crx0pqDGh_ecAHm60LfccJWMQu4L9ipjvfBxF3KKZOGBwsn0WkWqtrfiPKxkbQGltAWYVSg8StbO7FeomvmQRYL0IjgFcDmvCGiuIE1XARWIaptQhMAYbryj7aFeSIOUwAa')">Google V2</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('//gdriveplayer.to/embed2.php?link=aHAWCBspPreCY2dOTuK7vg4Yi5P8scKUtgCL0TXSNdyqgOC8cAO725eEPqVPd7i6O8PQctSlDphtVCJ2kpUAQCTaRItNsQfCY82HexWpSG%252BkYqme3DYDt4MJL0NGiJ3R1tn73iVHalu4uHE5nffTp%252FfNilPJ%252FOiTw3CCIfD6VDvAQZLNErulrx0m%252B0UfNH54Yxq%252BJOTLD7CQeLx4MfU9rrYeDBzarmqTcJNw%252BQ4iyQ1g%253D%253D')">Google V3</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<script>
+  function go(loc) {
+    document.getElementById('iframe').src = loc;
+  };
+  var btnContainer = document.getElementById("serverid");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+<script src="/a.js" type="text/javascript"></script>
+  </body>
+</html>
