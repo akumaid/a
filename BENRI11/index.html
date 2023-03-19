@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/css/sty.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="div-frame">
+  <div class="frame">
+    <iframe src="/a/BENRI11/akuma" allow="autoplay; encrypted-media" scrolling="no" frameborder="0" allowfullscreen id="iframe"></iframe>
+  </div>
+  <ul class="tab-server" id="serverid">
+    <li class="server">Pilih Server <ul class="sub-server">
+		<li class="btn active">
+          <a href="javascript:void" onclick="go('/a/BENRI11/akuma')">Akumadrive</a>
+        </li>
+		<li class="btn">
+          <a href="javascript:void" onclick="go('https://www.blogger.com/video.g?token=AD6v5dztbCmuG-N6sL35moS832ZeTJoAhN1Za3eYopzaklMnpNirobBbyFB9ECBMyKETNzjSHMjavGs-PG4FRfTV2ItfChule0XMCFLdp0y5CAM85M-3gtxJUAT3wcCWcbDvMxgn4v4')">Google V2</a>
+        </li>
+        <li class="btn">
+		<a href="javascript:void" onclick="go('https://streamsb.net/embed-tlgkmqav44ce?poster=https://kuma-stream.github.io/src/poster.png')">Streamsb</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('//gdriveplayer.to/embed2.php?link=SB6ajknxo7NAhXYvxhA8zgd2p35HftH26jtR6kucfp40TH%252FsZAFeoccPDlWt9SOV2WZ6PyWNNhV3BCpqB0RbM4x9iukAIS9aMsebXODjpWj8S1xW16l1moHH0dWEL4xCYZ%252BfmyjWKRqB7LW5VrsnJLo2tFRlT1ukPYoeMKJrxPKbR7G%252BW3%252FcCYtUVSDVYQaUvp9o5zglbOZA%252F74K0qmWumFY1ZatKWnwh7pU%252BwYaeQMw%253D%253D')">Google V3</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<script>
+  function go(loc) {
+    document.getElementById('iframe').src = loc;
+  };
+  var btnContainer = document.getElementById("serverid");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+<script src="/a.js" type="text/javascript"></script>
+  </body>
+</html>
