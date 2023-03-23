@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/css/sty.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="div-frame">
+  <div class="frame">
+    <iframe src="/a/SPYCR-11/akuma" allow="autoplay; encrypted-media" scrolling="no" frameborder="0" allowfullscreen id="iframe"></iframe>
+  </div>
+  <ul class="tab-server" id="serverid">
+    <li class="server">Pilih Server <ul class="sub-server">
+		<li class="btn active">
+          <a href="javascript:void" onclick="go('/a/SPYCR-11/akuma')">Akumadrive</a>
+        </li>
+        <li class="btn">
+		<a href="javascript:void" onclick="go('https://streamsb.net/embed-d2jryaqzo5dk?poster=https://kuma-stream.github.io/src/poster.png')">Streamsb</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('//gdriveplayer.to/embed2.php?link=xFYHv2Q5EFWzUHvJFnQpJAPablOd%252B75sZhyuHcJ9D4GCHqPh%252BklvFTQkSMryTNFL5V3%252F2hIfmo7lxPLhGSfEuNjpWi3F8rgp%252BxVK57oisbDP%252Fdw7KeHcrkMaRh3AVwxhutf3VMOvnPtEhm9z603Kr5YJVH3d%252FamN%252FF%252FFE%252Ffa9U4CvQFCHoKarOdXiwryU%252Fl4oxGjm9LmB2ISnNEw9dO9rPryxyrlvhtAIcFGcoqlEhKEfomTFqnl43eu2DRzt5k6M%253D')">Google V3</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://krakenfiles.com/embed-video/rRDg2F4LTp')">Kraken</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<script>
+  function go(loc) {
+    document.getElementById('iframe').src = loc;
+  };
+  var btnContainer = document.getElementById("serverid");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+<script src="/a.js" type="text/javascript"></script>
+  </body>
+</html>
